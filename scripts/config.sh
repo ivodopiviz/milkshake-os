@@ -48,7 +48,8 @@ function customize_image() {
 
     # useful tools
     apt-get install -y \
-        gnome-software
+        gnome-software \
+        apt-transport-https \
         curl \
         nano \
         less \
