@@ -49,9 +49,7 @@ function customize_image() {
     # useful tools
     apt-get install -y \
         gnome-software
-        apt-transport-https \
         curl \
-        vim \
         nano \
         less \
         flatpak
