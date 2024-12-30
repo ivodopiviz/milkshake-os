@@ -57,7 +57,7 @@ function customize_image() {
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
     # install flatpak apps
-    flatpak install -y io.github.zen_browser.zen
+    # flatpak install -y io.github.zen_browser.zen
     # FIXME: needs more chroot binding
     # flatpak install -y org.gnome.World.PikaBackup
 
