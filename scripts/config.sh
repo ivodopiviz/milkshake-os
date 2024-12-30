@@ -42,13 +42,11 @@ function customize_image() {
     # install graphics and desktop
     apt-get install -y \
         plymouth-themes \
-        gnome-session \
-        fonts-cantarell \
-        adwaita-icon-theme-full
+        vanilla-gnome-desktop \
+        vanilla-gnome-default-settings
 
     # useful tools
     apt-get install -y \
-        gnome-software \
         apt-transport-https \
         curl \
         nano \
