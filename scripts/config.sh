@@ -58,7 +58,8 @@ function customize_image() {
 
     # install flatpak apps
     flatpak install -y io.github.zen_browser.zen
-    flatpak install -y org.gnome.World.PikaBackup
+    # FIXME: needs more chroot binding
+    # flatpak install -y org.gnome.World.PikaBackup
 
     # set Zen as default browser
     xdg-settings set default-web-browser io.github.zen_browser.zen.desktop
