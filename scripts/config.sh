@@ -42,8 +42,8 @@ function customize_image() {
     # install graphics and desktop
     apt-get install -y \
         plymouth-themes \
-        vanilla-gnome-desktop \
-        vanilla-gnome-default-settings
+        gnome-session \
+        gnome-shell
 
     # useful tools
     apt-get install -y \
@@ -58,6 +58,10 @@ function customize_image() {
 
     # install flatpak apps
     flatpak install -y io.github.zen_browser.zen
+    flatpak install -y org.gnome.World.PikaBackup
+
+    # set Zen as default browser
+    xdg-settings set default-web-browser io.github.zen_browser.zen.desktop
 
     # remove ubuntu desktop settings panel
     rm /usr/share/applications/gnome-ubuntu-panel.desktop
