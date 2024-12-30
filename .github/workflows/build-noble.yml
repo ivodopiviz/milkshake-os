@@ -25,5 +25,5 @@ jobs:
         with:
           name: milkshake-os
           path: |
-            scripts/milkshake-os.iso.iso
+            scripts/milkshake-os.iso
             scripts/image/md5sum.txt
