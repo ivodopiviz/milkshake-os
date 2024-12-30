@@ -46,6 +46,8 @@ function find_index() {
 function chroot_enter_setup() {
     sudo mount --bind /dev chroot/dev
     sudo mount --bind /run chroot/run
+    sudo mount --bind / chroot/
+
     sudo chroot chroot mount none -t proc /proc
     sudo chroot chroot mount none -t sysfs /sys
     sudo chroot chroot mount none -t devpts /dev/pts
@@ -57,6 +59,7 @@ function chroot_exit_teardown() {
     sudo chroot chroot umount /dev/pts
     sudo umount chroot/dev
     sudo umount chroot/run
+    sudo umount chroot/
 }
 
 function check_host() {
