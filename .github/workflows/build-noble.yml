@@ -2,9 +2,9 @@ name: build-noble
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
   workflow_dispatch:
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
       - name: Archive artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: ubuntu-from-scratch
+          name: milkshake-os
           path: |
-            scripts/ubuntu-from-scratch.iso
+            scripts/milkshake-os.iso.iso
             scripts/image/md5sum.txt
