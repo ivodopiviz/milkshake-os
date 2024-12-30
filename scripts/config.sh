@@ -53,17 +53,22 @@ function customize_image() {
         less \
         flatpak
 
+    # setup flathub
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+    # install flatpak apps
+    flatpak install -y io.github.zen_browser.zen
+
+    # remove ubuntu desktop settings panel
+    rm /usr/share/applications/gnome-ubuntu-panel.desktop
+
     # remove snaps?
 
     # purge
-    # apt-get purge -y \
-    #     transmission-gtk \
-    #     transmission-common \
-    #     gnome-mahjongg \
-    #     gnome-mines \
-    #     gnome-sudoku \
-    #     aisleriot \
-    #     hitori
+    apt-get purge -y \
+        transmission-gtk \
+        transmission-common \
+        "libreoffice*"
 }
 
 # Used to version the configuration.  If breaking changes occur, manual

@@ -82,7 +82,7 @@ EOF
 
 # Load configuration values from file
 function load_config() {
-    if [[ -f "$SCRIPT_DIR/config.sh" ]]; then 
+    if [[ -f "$SCRIPT_DIR/config.sh" ]]; then
         . "$SCRIPT_DIR/config.sh"
     elif [[ -f "$SCRIPT_DIR/default_config.sh" ]]; then
         . "$SCRIPT_DIR/default_config.sh"
@@ -119,7 +119,7 @@ function install_pkg() {
         shim-signed \
         mtools \
         binutils
-    
+
     case $TARGET_UBUNTU_VERSION in
         "focal" | "bionic")
             apt-get install -y lupin-casper
@@ -128,7 +128,7 @@ function install_pkg() {
             echo "Package lupin-casper is not needed. Skipping."
             ;;
     esac
-    
+
     # install kernel
     apt-get install -y --no-install-recommends $TARGET_KERNEL_PACKAGE
 
@@ -195,12 +195,12 @@ insmod all_video
 set default="0"
 set timeout=30
 
-menuentry "Try Ubuntu FS without installing" {
+menuentry "Try Milkshake OS without installing" {
     linux /casper/vmlinuz boot=casper nopersistent toram quiet splash ---
     initrd /casper/initrd
 }
 
-menuentry "Install Ubuntu FS" {
+menuentry "Install Milkshake OS" {
     linux /casper/vmlinuz boot=casper only-ubiquity quiet splash ---
     initrd /casper/initrd
 }
@@ -284,7 +284,7 @@ EOF
     popd # return initial directory
 }
 
-function finish_up() { 
+function finish_up() {
     echo "=====> finish_up"
 
     # truncate machine id (why??)
@@ -332,4 +332,3 @@ for ((ii=$start_index; ii<$end_index; ii++)); do
 done
 
 echo "$0 - Initial build is done!"
-
